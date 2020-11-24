@@ -42,7 +42,7 @@
                 </div>
                 <div class="drawer-body">
                     <h6 class="text-muted text-uppercase">Help & settings</h6>
-                    <a href="#" class="btn btn-outline-success my-2 btn-sm">Your Account</a>
+                    <a href="your_account.html" class="btn btn-outline-success my-2 btn-sm">Your Account</a>
                     <a href="login.html" class="btn btn-warning my-2 btn-sm">Sign in</a>
                 </div>
                 <div class="drawer-footer">
@@ -139,7 +139,7 @@
                 <div class="dropdown-menu px-3" aria-labelledby="User Account">
                     <div class="d-flex justify-content-center">
                         <a href="#" class="btn btn-warning w-100">Singin</a>
-                        <p>New customer? <a href="#">Start here</a></p>
+                        <p>New customer? <a href="register.html">Start here</a></p>
                     </div>
                 </div>
             </li>
@@ -163,16 +163,16 @@
             <div class="card-body">
                 <h4 class="card-title">Register</h4>
                 <!--Register Form Start-->
-                <form class="novalidate">
+                <form class="needs-validation" method="post" action="#" novalidate>
                     <div class="form-group">
                         <label for="UserName">Your name: </label>
-                        <input type="text" name="name" class="form-control" placeholder="abc" id="UserName">
+                        <input type="text" name="name" class="form-control" placeholder="abc" id="UserName" required minlength="10">
 
                         <div class="valid-feedback">
                             <i class="far text-success fa-thumbs-up"></i> OK
                         </div>
                         <div class="invalid-feedback">
-                            <i class="fas text-danger fa-exclamation-triangle"></i> Some error in email.
+                            <i class="fas text-danger fa-exclamation-triangle"></i> Some error in your name.
                         </div>
                         <div class="form-group">
                             <label for="UserEmail">Email: </label>
@@ -188,7 +188,7 @@
                             </div>
                         </div>
                         <div class="form-group">
-                            <label for="userpassword">Password</label>
+                            <label for="userpassword">Password:</label>
                             <input type="password" class="form-control" placeholder="********" name="password"
                                 id="userpassword" aria-describedby="passwordHelp" required minlength="6">
                             <small id="passwordHelp" class="form-text text-muted"><i class="fas text-primary fa-info"></i> Password must be at least 6
@@ -202,10 +202,16 @@
                         </div>
 
                         <div class="form-group">
-                            <label for="userpassword2">Enter Again Password: </label>
+                            <label for="userpassword2">Enter Password Again: </label>
                             <input type="password" class="form-control" placeholder="********" name="password2"
                                 id="userpassword2" aria-describedby="passwordHelp2" required minlength="6">
                             <small id="passwordHelp2" class="form-text text-muted"><i class="fas text-primary fa-info"></i> Password must match the above.</small>
+                            <div class="valid-feedback">
+                                <i class="far text-success fa-thumbs-up"></i> OK
+                            </div>
+                            <div class="invalid-feedback">
+                                <i class="fas text-danger fa-exclamation-triangle"></i> Some error in re-type password.
+                            </div>
                             <div class="valid-feedback">
                                 <i class="far text-success fa-thumbs-up"></i> OK
                             </div>
